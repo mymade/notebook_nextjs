@@ -2,25 +2,19 @@
 import React, { useState } from "react";
 import Link from 'next/link'
 
-export default function Nav(){
-    const [login, setLogin] = useState(false);
-    function btnClick(){
-        // setLogin(!login)
-    }
+export default function Nav({ isLoggedIn}){
   return(
         <div className="header">  
             <div className="top-menu">
               <ul>
                 <li>
                     <div>
-                        <h2>Nextjs.shop</h2>
+                        <h2>NICKSHOP</h2>
                     </div>
                 </li>
                 <li>
                         <Link href="/login">
-                        <button onClick={btnClick}>
-                            {login ? "LOGOUT" : "LOGIN"}
-                        </button>
+                            {isLoggedIn ? "LOGOUT" : "LOGIN"}
                         </Link>
                         <div>
                             <Link href="/mypage">
@@ -62,7 +56,7 @@ export default function Nav(){
                 <li>
                     <div className="search-bar">
                         <input type="text" placeholder="찾고 싶은 상품을 입력해주세요"></input>
-                        <button className="search-btn"><i class="bi bi-search"></i></button>
+                        <button className="search-btn"><i className="bi bi-search"></i></button>
                     </div>
                 </li>
               </ul>
