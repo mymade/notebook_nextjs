@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+body {
+  font-family: "Pretendard-Regular";
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+body #app {
+  width: 1920px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+body #app .header {
+  width: 1920px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+body #app .header .top-menu {
+  width: 1200px;
+  height: 56px;
+  line-height: 56px;
+  margin: 0 auto;
+}
+body #app .header .top-menu ul {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #app .header .top-menu ul li {
+  display: flex;
+  font-size: 10pt;
+  color: rgb(170, 170, 170);
+}
+body #app .header .top-menu ul li div {
+  margin-left: 20px;
+}
+body #app .header .navbar {
+  width: 1920px;
+  height: 100px;
+  border-top: 1px solid rgb(170, 170, 170);
+  background-color: white;
+}
+body #app .header .navbar ul {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #app .header .navbar ul li.menu-bar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body #app .header .navbar ul li.menu-bar div {
+  margin-right: 60px;
+  text-align: center;
+  font-size: 13pt;
+}
+body #app .header .navbar ul .search-bar {
+  position: relative;
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 15px;
+}
+body #app .header .navbar ul .search-bar input {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  overflow: hidden;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 34px;
+  border: 3px solid black;
+  outline: 0;
+}
+body #app .header .navbar ul .search-bar input:focus {
+  outline: 0;
+}
+body #app .header .navbar ul .search-bar button.search-btn {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 12pt;
+}
+body #app .header .line-banner {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(226, 7, 7);
+  text-align: center;
+}
+body #app .wrap {
+  text-align: center;
+  margin-bottom: 60px;
+}
+body #app .wrap .main-banner {
+  height: 420px;
+}
+body #app .wrap .main-banner img {
+  background-color: rgb(214, 214, 214);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #app .wrap .section-box {
+  margin-top: 30px;
+}
+body #app .wrap .section-box h3 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body #app .wrap .section-box .gallery-swiper {
+  width: 1200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgb(234, 234, 234);
+}
+body #app footer {
+  background-color: rgb(68, 68, 68);
+  color: rgb(170, 170, 170);
+}
+body #app footer .footer-wrap {
+  height: 200px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+body #app footer .footer-wrap p {
+  padding: 20px;
+}
+body #app footer .footer-wrap ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #app footer .footer-wrap ul li.footer-menu ul li {
+  font-size: 12pt;
+  margin-right: 60px;
+}
+body #app footer .footer-wrap ul .sns-box {
+  display: flex;
+}
+body #app footer .footer-wrap ul .sns-box li {
+  margin-right: 30px;
+}
+body #app footer .footer-wrap ul .sns-box li i {
+  font-size: 15pt;
+}/*# sourceMappingURL=my.css.map */
