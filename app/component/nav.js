@@ -11,7 +11,7 @@ export default function Nav(){
               <ul>
                 <li>
                     <div>
-                        <h2 className="logo">HELLO PIZZA</h2>
+                        <h2 className="logo"><Link href="/">HELLO PIZZA</Link></h2>
                     </div>
                 </li>
                 <li>
@@ -20,12 +20,12 @@ export default function Nav(){
                         </div>
                         <div>
                             <Link href="/mypage">
-                                MYPAGE
+                                마이페이지
                             </Link>
                         </div>
                         <div>
                             <Link href="/cart">
-                                CART
+                                장바구니
                             </Link>
                         </div>
                 </li>
@@ -35,13 +35,13 @@ export default function Nav(){
               <ul>
                 <li className="menu-bar">
                     <div>
-                        <Link href="/">
-                            HOME
+                        <Link href="/notice">
+                            NOTICE
                         </Link>
                     </div>
                     <div>
-                        <Link href="/notice">
-                            NOTICE
+                        <Link href="/event">
+                            EVENT
                         </Link>
                     </div>
                     <div>
@@ -70,4 +70,12 @@ export default function Nav(){
       </div>
   )
 
+}
+
+export function 인사(){
+    return(
+        <h1>
+            안녕하세요
+        </h1>
+    )
 }

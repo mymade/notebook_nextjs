@@ -23,7 +23,7 @@ export default function Login(){
             // let pw = document.querySelector("#pw")
         }
         else{
-            alert("로그인 성공");
+            alert(`${id}님 환영합니다!`);
             e.preventDefault();
             login();
             router.push("/")
