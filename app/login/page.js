@@ -3,16 +3,15 @@
 import Link from 'next/link'
 import React, { useState } from "react"
 import { usePathname, useRouter } from 'next/navigation';
-
+import { useAuth } from "../../context/AuthContext";
 
 
 
 export default function Login(){
-
+    const { isLoggedIn, login } = useAuth();
     const [id, setId] = useState('');
     const [pw, setPw] = useState('');
     const router = useRouter();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const loginCheck =(e)=>{
 
@@ -26,7 +25,7 @@ export default function Login(){
         else{
             alert("로그인 성공");
             e.preventDefault();
-            setIsLoggedIn(true);
+            login();
             router.push("/")
             }
     }

@@ -1,21 +1,23 @@
 "use client";
-import React, { useState } from "react";
-import Link from 'next/link'
 
-export default function Nav({ isLoggedIn}){
+import Link from 'next/link'
+import { useAuth } from "../../context/AuthContext";
+
+export default function Nav(){
+  const { isLoggedIn, logout } = useAuth();
   return(
         <div className="header">  
             <div className="top-menu">
               <ul>
                 <li>
                     <div>
-                        <h2>NICKSHOP</h2>
+                        <h2 className="logo">HELLO PIZZA</h2>
                     </div>
                 </li>
                 <li>
-                        <Link href="/login">
-                            {isLoggedIn ? "LOGOUT" : "LOGIN"}
-                        </Link>
+                        <div>
+                            {isLoggedIn ?  <button onClick={logout}>로그아웃</button> : <Link href="/login">로그인</Link>}
+                        </div>
                         <div>
                             <Link href="/mypage">
                                 MYPAGE

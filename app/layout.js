@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./sass/my.scss";
 import Nav from "./component/nav"
 import Footer from "./component/Footer"
+import ClientProviders from "./Providers.js"; // Client Provider 래퍼 import
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,15 +31,17 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div id="app">
-          <Nav></Nav>
-          {children}
-          <Footer></Footer>
-        </div>
-      </body>
+      <ClientProviders>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <div id="app">
+            <Nav></Nav>
+            {children}
+            <Footer></Footer>
+          </div>
+        </body>
+      </ClientProviders>
     </html>
   );
 }
