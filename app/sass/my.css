@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
+  font-family: "yg-jalnan";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
@@ -39,20 +45,20 @@ body {
   background-color: rgb(255, 255, 255);
 }
 body #app {
-  width: 1920px;
+  width: 100vw;
   margin: 0 auto;
   height: 100%;
   background-color: rgb(255, 255, 255);
 }
 body #app .header {
-  width: 1920px;
+  width: 100vw;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
 }
 body #app .header .top-menu {
-  width: 1200px;
+  width: 1300px;
   height: 56px;
   line-height: 56px;
   margin: 0 auto;
@@ -68,17 +74,22 @@ body #app .header .top-menu ul li {
   font-size: 10pt;
   color: rgb(170, 170, 170);
 }
+body #app .header .top-menu ul li .logo {
+  font-family: "yg-jalnan";
+  font-size: 16pt;
+  color: red;
+}
 body #app .header .top-menu ul li div {
   margin-left: 20px;
 }
 body #app .header .navbar {
-  width: 1920px;
+  width: 100vw;
   height: 100px;
   border-top: 1px solid rgb(170, 170, 170);
   background-color: white;
 }
 body #app .header .navbar ul {
-  width: 1200px;
+  width: 1300px;
   height: 100%;
   margin: 0 auto;
   padding: 0px 40px;
@@ -92,7 +103,7 @@ body #app .header .navbar ul li.menu-bar {
   align-items: center;
 }
 body #app .header .navbar ul li.menu-bar div {
-  margin-right: 60px;
+  margin-right: 100px;
   text-align: center;
   font-size: 13pt;
 }
@@ -111,7 +122,7 @@ body #app .header .navbar ul .search-bar input {
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 34px;
-  border: 3px solid black;
+  border: 2px solid black;
   outline: 0;
 }
 body #app .header .navbar ul .search-bar input:focus {
@@ -145,6 +156,41 @@ body #app .wrap .main-banner img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #app .wrap .menu-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #app .wrap .menu-wrap .menu-box {
+  width: 25%;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  height: 420px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+body #app .wrap .menu-wrap .menu-box a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+body #app .wrap .menu-wrap .menu-box a .img-box {
+  width: 100%;
+  height: 260px;
+  border-radius: 0px 0px 50px 0px;
+  overflow: hidden;
+}
+body #app .wrap .menu-wrap .menu-box a .img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
 body #app .wrap .section-box {
   margin-top: 30px;
 }
@@ -154,7 +200,7 @@ body #app .wrap .section-box h3 {
   margin-bottom: 10px;
 }
 body #app .wrap .section-box .gallery-swiper {
-  width: 1200px;
+  width: 1300px;
   height: 300px;
   display: flex;
   align-items: center;
@@ -162,13 +208,126 @@ body #app .wrap .section-box .gallery-swiper {
   margin: 0 auto;
   background-color: rgb(234, 234, 234);
 }
+body #app .wrap .login-wrap {
+  width: 1300px;
+  margin: 0 auto;
+  height: calc(100vh - 466px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #app .wrap .login-wrap h3 {
+  font-size: 28pt;
+  margin-bottom: 12px;
+}
+body #app .wrap .login-wrap p a {
+  margin-left: 4px;
+  font-weight: bold;
+  font-size: 14pt;
+}
+body #app .wrap .login-wrap p a i {
+  font-size: 12pt;
+  margin-left: 4px;
+}
+body #app .wrap .login-wrap form {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1000px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #app .wrap .login-wrap form .id-box, body #app .wrap .login-wrap form .pw-box {
+  margin-bottom: 12px;
+}
+body #app .wrap .login-wrap form .id-box input, body #app .wrap .login-wrap form .pw-box input {
+  font-size: 12pt;
+  padding: 0 15px;
+  width: 450px;
+  height: 60px;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 8px;
+  outline: none;
+}
+body #app .wrap .login-wrap form .id-box input:focus, body #app .wrap .login-wrap form .pw-box input:focus {
+  outline: none;
+}
+body #app .wrap .login-wrap form .id-box input::-moz-placeholder, body #app .wrap .login-wrap form .pw-box input::-moz-placeholder {
+  font-size: 14pt;
+}
+body #app .wrap .login-wrap form .id-box input::placeholder, body #app .wrap .login-wrap form .pw-box input::placeholder {
+  font-size: 14pt;
+}
+body #app .wrap .login-wrap form .login-btn {
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 450px;
+  height: 60px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-size: 14pt;
+}
+body #app .wrap .login-wrap form .login-btn:hover {
+  background-color: black;
+  color: white;
+}
+body #app .wrap .login-wrap .login-option {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: left;
+  font-size: 11pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+body #app .wrap .login-wrap .login-option .find-box {
+  border-radius: 8px;
+  border: 1px solid gray;
+  padding: 10px 16px;
+  transition: 0.3s;
+}
+body #app .wrap .login-wrap .login-option .find-box i {
+  margin-left: 5px;
+}
+body #app .wrap .login-wrap .login-option .find-box:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+body #app .wrap .login-wrap .login-option .login-check {
+  display: flex;
+}
+body #app .wrap .login-wrap .login-option .login-check div:first-child {
+  margin-right: 10px;
+}
+body #app .wrap .login-wrap .login-option .login-check input {
+  margin-left: 4px;
+}
+body #app .wrap .cart-box {
+  width: 1300px;
+  margin: 0 auto;
+}
+body #app .wrap .cart-box .cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+}
 body #app footer {
   background-color: rgb(68, 68, 68);
   color: rgb(170, 170, 170);
 }
 body #app footer .footer-wrap {
   height: 200px;
-  width: 1200px;
+  width: 1300px;
   display: flex;
   align-items: center;
   justify-content: center;
