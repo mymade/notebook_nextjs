@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import {connectDB} from "@/util/database"
+import {connectDB} from "@/util/database.js"
 import Link from 'next/link'
 import Btn from './listBtn'
 
