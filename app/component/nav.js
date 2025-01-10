@@ -46,7 +46,7 @@ export default function Nav(){
                     </div>
                     <div>
                         <Link href="/list">
-                            LIST
+                            MENU
                         </Link>
                     </div>
                     <div>

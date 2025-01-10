@@ -8,9 +8,9 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
 }
 :root {
@@ -36,7 +36,7 @@ body {
   }
 }
 body {
-  font-family: "Pretendard-Regular";
+  font-family: "SUIT-Regular";
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -146,6 +146,10 @@ body #app .wrap {
   text-align: center;
   margin-bottom: 60px;
 }
+body #app .wrap .category-name {
+  font-size: 25pt;
+  margin-top: 100px;
+}
 body #app .wrap .main-banner {
   height: 420px;
 }
@@ -156,40 +160,156 @@ body #app .wrap .main-banner img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #app .wrap .list-btn {
+  padding: 40px 0;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+body #app .wrap .list-btn .menu-btn {
+  margin-left: 20px;
+  width: 180px;
+  height: 60px;
+  border: 2px solid red;
+  border-radius: 50px;
+  font-size: 13pt;
+  transition: 0.3s;
+}
+body #app .wrap .list-btn .menu-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #app .wrap .list-btn .menu-btn:nth-child(1) {
+  margin-left: 0;
+}
+body #app .wrap .list-btn .menu-btn:hover {
+  background-color: red;
+  color: white;
+}
 body #app .wrap .menu-wrap {
+  width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 body #app .wrap .menu-wrap .menu-box {
   width: 25%;
-  background-color: #f1f1f1;
-  border-radius: 20px;
-  height: 420px;
-  margin-right: 20px;
+  background-color: #ffffff;
+  height: 500px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-right: 60px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
   overflow: hidden;
 }
 body #app .wrap .menu-wrap .menu-box a {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
 }
 body #app .wrap .menu-wrap .menu-box a .img-box {
   width: 100%;
-  height: 260px;
-  border-radius: 0px 0px 50px 0px;
+  height: 220px;
   overflow: hidden;
+  border-radius: 5px;
 }
 body #app .wrap .menu-wrap .menu-box a .img-box img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title {
+  font-weight: 700;
+  font-size: 15pt;
+  display: flex;
+  align-items: center;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .HOT, body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .NEW, body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .BEST {
+  font-size: 8pt;
+  background-color: red;
+  padding: 2px 8px;
+  color: white;
+  margin-left: 4px;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price {
+  display: flex;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p {
+  margin-right: 20px;
+  font-size: 12pt;
+  font-weight: 600;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p span {
+  margin-right: 8px;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p span:empty {
+  margin-right: unset;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price .menu-size {
+  font-weight: normal;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 11pt;
+  color: black;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-content {
+  text-align: left;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid darkgray;
+  margin-top: 12px;
+  font-size: 10pt;
+  color: gray;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .menu-content .content-bottom {
+  height: 20px;
+  margin-bottom: 30px;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box p {
+  margin-left: 12px;
+  font-size: 10pt;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box p i {
+  margin-right: 6px;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-now {
+  color: black;
+  border: 2px solid red;
+  transition: 0.3s;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-cart {
+  color: black;
+  border: 2px solid black;
+  transition: 0.3s;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-now:hover {
+  background-color: red;
+  color: white;
+}
+body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-cart:hover {
+  background-color: black;
+  color: white;
 }
 body #app .wrap .section-box {
   margin-top: 30px;
