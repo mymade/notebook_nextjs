@@ -7,11 +7,11 @@ import Btn from './listBtn'
 export default async function List() {
     // awiat은 function 옆에 async를 써줘야한다
     const client = await connectDB;
-    const db = client.db("hp")
+    const db = client.db("hplist")
     let result = await db.collection("menu").find().toArray()
-    // .find()         // 데이터 조회
-    // .sort({ createdAt: -1 })  // 최신순으로 정렬
-    // .toArray();
+    //.find()         // 데이터 조회
+    //.sort({ createdAt: -1 })  // 최신순으로 정렬
+    //.toArray();
     // console.log(result)
     // test 컬렉션에 있는 모든 document를 가져와라
     // 최신순 정렬 
