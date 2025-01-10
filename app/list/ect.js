@@ -21,10 +21,14 @@ export default function Ect({data}){
                       </div>
                       <div className='menu-price'>
                         <p>
-                          <span className='menu-size1'><input className='size-option' type="radio"/>{a.size1}</span>{a.price1}
+                          <span className='menu-size1'>
+                          <input className='size-option' name="size" value="M" type="radio"/>
+                          {a.size1}</span>{a.price1}
                         </p>
                         <p>
-                          <span className='menu-size2'><input className='size-option' type="radio"/>{a.size2}</span>{a.price2}
+                          <span className='menu-size2'>
+                          <input className='size-option' name="size" value="L" type="radio"/>
+                          {a.size2}</span>{a.price2}
                         </p>
                       </div>
                       <div className='menu-content'>
@@ -32,8 +36,9 @@ export default function Ect({data}){
                         <div className="content-bottom">{a.content2}</div>
                       </div>
                       <div className="icon-box">
-                      <p className='icon-cart'><i className="bi bi-cart"></i>장바구니</p>
-                      <p className='icon-now'><i className="bi bi-hand-index-thumb"></i>바로 주문</p>
+                        <p className='icon-search'><i className="bi bi-search"></i>상세보기</p>
+                        <p className='icon-cart'><i className="bi bi-cart"></i>장바구니</p>
+                        <p className='icon-now'><i className="bi bi-hand-index-thumb"></i>바로 주문</p>
                     </div>
                     </div>
 

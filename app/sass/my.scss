@@ -54,6 +54,7 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: rgb(255, 255, 255);
+    position: relative;
     #app{
         width: 100vw;
         margin: 0 auto;
@@ -155,8 +156,19 @@ body{
             }
         }
         .wrap{
+
           text-align: center;
           margin-bottom: 60px;
+          .menu-popup{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid red;
+            width: 1200px;
+            height: 600px;
+          }
           .category-name{
             font-size: 25pt;
             margin-top: 100px;
@@ -218,7 +230,7 @@ body{
               box-sizing: border-box;
               margin-bottom: 40px;
               overflow: hidden;
-              a{
+              .box{
                 width: 100%;
                 height: 100%;
                 .img-box{
@@ -265,13 +277,18 @@ body{
                         margin-right: unset;
                       }
                     }
-                    .menu-size{
+                    .menu-size1, .menu-size2{
                       font-weight: normal;
                       display: inline-block;
                       border-radius: 50%;
                       font-size: 11pt;
                       color: black;
                     } 
+                    .menu-size1 > input, .menu-size2 > input{
+                      width: 15px;
+                      height: 15px;
+                      margin-right: 6px;
+                    }
                   }
                   .menu-content{
                     text-align: left;
@@ -287,20 +304,25 @@ body{
                     }
                   }
                   .icon-box{
+                    cursor: pointer;
                     width: 100%;
                     display: flex;
                     justify-content: end;
                     p{
-                      margin-left: 12px;
-                      font-size: 10pt;
-                      width: 100px;
-                      height: 40px;
+                      margin-left: 8px;
+                      font-size: 9pt;
+                      width: 110px;
+                      height: 46px;
+                      border-radius: 30px;
                       display: flex;
                       align-items: center;
                       justify-content: center;
                       i{
                         margin-right: 6px;
                       }
+                    }
+                    p:nth-child(1){
+                      margin-left: 0;
                     }
                     .icon-now{
                       color: black;
@@ -312,11 +334,20 @@ body{
                       border: 2px solid black;
                       transition: 0.3s;
                     }
+                    .icon-search{
+                      color: black;
+                      border: 2px solid black;
+                      transition: 0.3s;
+                    }
                     .icon-now:hover{
                       background-color: red;
                       color: white;
                     }
                     .icon-cart:hover{
+                      background-color: black;
+                      color: white;
+                    }
+                    .icon-search:hover{
                       background-color: black;
                       color: white;
                     }

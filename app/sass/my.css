@@ -206,64 +206,69 @@ body #app .wrap .menu-wrap .menu-box {
   margin-bottom: 40px;
   overflow: hidden;
 }
-body #app .wrap .menu-wrap .menu-box a {
+body #app .wrap .menu-wrap .menu-box .box {
   width: 100%;
   height: 100%;
 }
-body #app .wrap .menu-wrap .menu-box a .img-box {
+body #app .wrap .menu-wrap .menu-box .box .img-box {
   width: 100%;
   height: 220px;
   overflow: hidden;
   border-radius: 5px;
 }
-body #app .wrap .menu-wrap .menu-box a .img-box img {
+body #app .wrap .menu-wrap .menu-box .box .img-box img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about {
+body #app .wrap .menu-wrap .menu-box .box .menu-about {
   padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-title {
   font-weight: 700;
   font-size: 15pt;
   display: flex;
   align-items: center;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .HOT, body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .NEW, body #app .wrap .menu-wrap .menu-box a .menu-about .menu-title .BEST {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-title .HOT, body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-title .NEW, body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-title .BEST {
   font-size: 8pt;
   background-color: red;
   padding: 2px 8px;
   color: white;
   margin-left: 4px;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price {
   display: flex;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price p {
   margin-right: 20px;
   font-size: 12pt;
   font-weight: 600;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p span {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price p span {
   margin-right: 8px;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price p span:empty {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price p span:empty {
   margin-right: unset;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-price .menu-size {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price .menu-size1, body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price .menu-size2 {
   font-weight: normal;
   display: inline-block;
   border-radius: 50%;
   font-size: 11pt;
   color: black;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-content {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price .menu-size1 > input, body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-price .menu-size2 > input {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-content {
   text-align: left;
   width: 100%;
   padding-top: 10px;
@@ -272,42 +277,56 @@ body #app .wrap .menu-wrap .menu-box a .menu-about .menu-content {
   font-size: 10pt;
   color: gray;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .menu-content .content-bottom {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .menu-content .content-bottom {
   height: 20px;
   margin-bottom: 30px;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box {
+  cursor: pointer;
   width: 100%;
   display: flex;
   justify-content: end;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box p {
-  margin-left: 12px;
-  font-size: 10pt;
-  width: 100px;
-  height: 40px;
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box p {
+  margin-left: 8px;
+  font-size: 9pt;
+  width: 110px;
+  height: 46px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box p i {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box p i {
   margin-right: 6px;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-now {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box p:nth-child(1) {
+  margin-left: 0;
+}
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-now {
   color: black;
   border: 2px solid red;
   transition: 0.3s;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-cart {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-cart {
   color: black;
   border: 2px solid black;
   transition: 0.3s;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-now:hover {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-search {
+  color: black;
+  border: 2px solid black;
+  transition: 0.3s;
+}
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-now:hover {
   background-color: red;
   color: white;
 }
-body #app .wrap .menu-wrap .menu-box a .menu-about .icon-box .icon-cart:hover {
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-cart:hover {
+  background-color: black;
+  color: white;
+}
+body #app .wrap .menu-wrap .menu-box .box .menu-about .icon-box .icon-search:hover {
   background-color: black;
   color: white;
 }

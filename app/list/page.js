@@ -27,6 +27,3 @@ export default async function List() {
       </div>
     );
   }
-
-
-  
