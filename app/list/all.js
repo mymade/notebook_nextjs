@@ -63,7 +63,7 @@ export default function All({data}){
                                 <div className="content-bottom">{a.content2}</div>
                               </div>
                               <div className="icon-box">
-                              <p className='icon-search'><i className="bi bi-search"></i>상세보기</p>
+                              <p className='icon-search'><Link href={'/detail/' + a._id}><i className="bi bi-search"></i>상세보기</Link></p>
                               <p className='icon-cart'><i className="bi bi-cart"></i>장바구니</p>
                               <p className='icon-now'><i className="bi bi-hand-index-thumb"></i>바로 주문</p>
                               </div>
